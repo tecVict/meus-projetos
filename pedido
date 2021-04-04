@@ -46,6 +46,7 @@ public class Pedido {
         
         System.out.println(ped1.getCodigo() + " - "  + ped1.getCliente() + " pediu "  + ped1.getPedido());
         System.out.println(ped2.getCodigo() + " - "  + ped2.getCliente() + " pediu "  + ped2.getPedido());
+        System.out.println (ped3.getCodigo ()+"-"+ped3.getCliente()+"pediu"+ped3.getPedido());
     }
     
 }
