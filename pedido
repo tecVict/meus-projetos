@@ -1,0 +1,52 @@
+package pedido;
+
+public class Pedido {
+
+    private int codigo;
+    private String cliente;
+    private String pedido;
+    private static int proximoPedido = 1;
+    
+    public Pedido(String nome, String pedido){
+         this.codigo = proximoPedido;
+         proximoPedido++;
+         this.cliente = nome;
+         this.pedido = pedido;
+    }
+    public Pedido(){
+     this.codigo = 0;
+     this.cliente = "";
+     this.pedido = "";
+    }
+    
+    public int getCodigo(){
+        return codigo;
+    }
+    public void setCodigo(int codigo) {
+        this.codigo = codigo;
+    }
+    public String getCliente() {
+        return cliente;
+    }
+    public void setCliente(String cliente) {
+        this.cliente = cliente;
+    }
+    public String getPedido() {
+        return pedido;
+    }
+    public void setPedido(String pedido) {
+        this.pedido = pedido;
+    }
+}public class Registro {
+    
+    public static void main(String[] args) {
+        Pedido ped1 = new Pedido("joao", "hamburg artesanal");
+        Pedido ped2 = new Pedido("carlos", "hamburg artesanal");
+        Pedido ped3 = new Pedido("maria", "hamburg artesanal");
+        
+        System.out.println(ped1.getCodigo() + " - "  + ped1.getCliente() + " pediu "  + ped1.getPedido());
+        System.out.println(ped2.getCodigo() + " - "  + ped2.getCliente() + " pediu "  + ped2.getPedido());
+    }
+    
+}
+
